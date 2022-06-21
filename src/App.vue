@@ -1,6 +1,11 @@
 <template>
 <div id="app">
   <TheHeader></TheHeader>
+  <main>
+    <div class="main-content">
+      Aggiungi contenuto qui
+    </div>
+  </main>
   <TheFooter></TheFooter>
 </div>
 </template>
@@ -24,5 +29,12 @@ export default {
   font-family: Avenir, Helvetica, Arial, sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+}
+.main-content {
+  background-color: black;
+  color: white;
+  font-size: 30px;
+  text-align: center;
+  padding: 5rem 0;
 }
 </style>
