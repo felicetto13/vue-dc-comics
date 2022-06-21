@@ -6,6 +6,9 @@
       Aggiungi contenuto qui
     </div>
   </main>
+  <div class="banner bg-blue">
+
+  </div>
   <TheFooter></TheFooter>
 </div>
 </template>
@@ -36,5 +39,12 @@ export default {
   font-size: 30px;
   text-align: center;
   padding: 5rem 0;
+}
+.banner {
+  padding: 5rem 0;
+}
+.bg-blue {
+  background-color: #0082F9;
+  color: white;
 }
 </style>
