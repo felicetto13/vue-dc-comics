@@ -1,30 +1,66 @@
 <template>
-<div id="app">
-  <TheHeader></TheHeader>
-  <main>
-    <div class="main-content">
-      Aggiungi contenuto qui
+  <div id="app">
+    <TheHeader></TheHeader>
+    <main>
+      <div class="main-content">Aggiungi contenuto qui</div>
+    </main>
+    <div class="banner bg-blue"></div>
+    <TheFooter></TheFooter>
+    <div class="sign-up-banner">
+      <div class="container">
+        <div class="row">
+          <div class="col justify-content-start">
+            <button class="btn my-btn-primary">SIGN-UP NOW!</button>
+          </div>
+          <div class="col justify-content-end align-self-center">
+            <h2 class="text-blue">FOLLOW US</h2>
+            <ul class="list-unstyled">
+              <li v-for="social in socialItems" :key="social">
+              <img :src="'./assets/img/footer-'+ social.img" :alt="social.name"></li>
+            </ul>
+          </div>
+        </div>
+      </div>
     </div>
-  </main>
-  <div class="banner bg-blue">
-
   </div>
-  <TheFooter></TheFooter>
-</div>
 </template>
-
 <script>
-
-import TheHeader from "./components/TheHeader.vue"
-import TheFooter from "./components/TheFooter.vue"
-
-
+import TheHeader from "./components/TheHeader.vue";
+import TheFooter from "./components/TheFooter.vue";
 export default {
-  name: 'App',
+  name: "App",
   components: {
-    TheHeader, TheFooter
-  }
-}
+    TheHeader,
+    TheFooter,
+  },
+  data() {
+    return {
+      socialItems:
+      [
+        {
+          name: "facebook",
+          img: "facebook.png",
+        },
+        {
+          name: "twitter",
+          img: "twitter.png",
+        },
+        {
+          name: "youtube",
+          img: "youtube.png",
+        },
+        {
+          name: "pinterest",
+          img: "pinterest.png",
+        },
+        {
+          name: "periscope",
+          img: "periscope.png",
+        }
+      ]
+    };
+  },
+};
 </script>
 
 <style lang="scss">
@@ -44,7 +80,23 @@ export default {
   padding: 5rem 0;
 }
 .bg-blue {
-  background-color: #0082F9;
+  background-color: #0082f9;
   color: white;
+}
+
+.sign-up-banner {
+  background-color: #303030;
+  padding: 2rem 0;
+}
+.sign-up-banner .my-btn-primary {
+  background-color: transparent;
+  color: white;
+  border-color: #0082f9;
+  border-radius: 0;
+  border-width: 2px;
+  padding: 1rem 1.5rem;
+}
+.text-blue {
+  color: #0082f9;
 }
 </style>

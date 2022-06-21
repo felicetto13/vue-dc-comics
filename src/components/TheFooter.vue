@@ -1,8 +1,8 @@
 <template>
   <footer>
     <div class="container">
-      <div class="row">
-        <div class="col py-5">
+      <div class="row justify-content-between">
+        <div class="col-5 py-5">
           <div class="row">
             <div class="col">
               <h4 class="text-uppercase fw-bold text-start">dc comics</h4>
