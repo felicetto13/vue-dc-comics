@@ -2,7 +2,7 @@
   <div id="app">
     <TheHeader></TheHeader>
     <main>
-      <div class="main-content">Aggiungi contenuto qui</div>
+      <MainContent></MainContent>
     </main>
     <div class="banner bg-blue">
       <BannerBlue></BannerBlue>
@@ -30,12 +30,14 @@
 import TheHeader from "./components/TheHeader.vue";
 import TheFooter from "./components/TheFooter.vue";
 import BannerBlue from "./components/BannerBlue.vue";
+import MainContent from "./components/MainContent.vue";
 export default {
   name: "App",
   components: {
     TheHeader,
     TheFooter,
-    BannerBlue
+    BannerBlue,
+    MainContent
   },
   data() {
     return {
