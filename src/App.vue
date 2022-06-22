@@ -12,11 +12,11 @@
           <div class="col justify-content-start">
             <button class="btn my-btn-primary">SIGN-UP NOW!</button>
           </div>
-          <div class="col justify-content-end align-self-center">
+          <div class="col d-flex gap-5 justify-content-end align-self-center">
             <h2 class="text-blue">FOLLOW US</h2>
-            <ul class="list-unstyled">
-              <li v-for="social in socialItems" :key="social">
-              <img :src="'./assets/img/footer-'+ social.img" :alt="social.name"></li>
+            <ul class="list-unstyled d-flex">
+              <li v-for="social in socialItems" :key="social" class="social-icon">
+              <img :src="require('/src/assets/img/footer-'+ social.img)" :alt="social.name"></li>
             </ul>
           </div>
         </div>
@@ -98,5 +98,8 @@ export default {
 }
 .text-blue {
   color: #0082f9;
+}
+.social-icon {
+  padding: 0 .5rem;
 }
 </style>
