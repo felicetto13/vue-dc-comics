@@ -4,7 +4,9 @@
     <main>
       <div class="main-content">Aggiungi contenuto qui</div>
     </main>
-    <div class="banner bg-blue"></div>
+    <div class="banner bg-blue">
+      <BannerBlue></BannerBlue>
+    </div>
     <TheFooter></TheFooter>
     <div class="sign-up-banner">
       <div class="container">
@@ -15,7 +17,7 @@
           <div class="col d-flex gap-5 justify-content-end align-self-center">
             <h2 class="text-blue">FOLLOW US</h2>
             <ul class="list-unstyled d-flex">
-              <li v-for="social in socialItems" :key="social" class="social-icon">
+              <li v-for="(social,i) in socialItems" :key="i" class="social-icon">
               <img :src="require('/src/assets/img/footer-'+ social.img)" :alt="social.name"></li>
             </ul>
           </div>
@@ -27,11 +29,13 @@
 <script>
 import TheHeader from "./components/TheHeader.vue";
 import TheFooter from "./components/TheFooter.vue";
+import BannerBlue from "./components/BannerBlue.vue";
 export default {
   name: "App",
   components: {
     TheHeader,
     TheFooter,
+    BannerBlue
   },
   data() {
     return {
@@ -58,7 +62,7 @@ export default {
           img: "periscope.png",
         }
       ]
-    };
+    }
   },
 };
 </script>
