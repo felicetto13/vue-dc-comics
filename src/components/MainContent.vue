@@ -5,7 +5,7 @@
       
     </div>
     <div class="bg-dark-gray">
-      <div class="container py-5 position-relative">
+      <div class="container text-center py-5 position-relative">
         <div class="title-card-container">Current Series</div>
         <div class="row row-cols-6 justify-content-center py-4">
           <div
@@ -23,6 +23,7 @@
             </CardContent>
           </div>
         </div>
+        <button class="btn btn-primary">Load More</button>
       </div>
     </div>
   </div>
